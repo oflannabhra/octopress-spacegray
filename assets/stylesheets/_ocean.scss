@@ -1,0 +1,29 @@
+// from the base16 color schemes 
+// https://github.com/chriskempson/base16
+// ocean
+
+$_base00: #2b303b; //darkest blue
+$_base01: #343d46; //dark blue
+$_base02: #4f5b66; //darkest gray
+$_base03: #65737e; //dark gray
+$_base04: #a7adba; //medium gray
+$_base05: #c0c5ce; //medium light gray
+$_base06: #dfe1e8; //light gray
+$_base07: #eff1f5; //lightest gray
+
+$_base08: #bf616a; //red
+$_base09: #d08770; //orange
+$_base0A: #ebcb8b; //yellow
+$_base0B: #a3be8c; //green
+$_base0C: #96b5b4; //cyan
+$_base0D: #8fa1b3; //blue
+$_base0E: #b48ead; //violet
+$_base0F: #ab7967; //magenta
+
+$pre-marker:              rgba(#00baff, .5) !default;
+$pre-marker-border:       rgba($pre-marker, .13) !default;
+$pre-marker-border-left:  $pre-marker;
+
+$code-bg:                 rgba(#fff, .3); // slate gray (spacegray)
+$code-bg-light: #dfe1e8;
+$code-border:             rgba(#000, .1);

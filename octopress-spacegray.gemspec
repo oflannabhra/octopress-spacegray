@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'octopress-solarized/version'
+require 'octopress-spacegray/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "octopress-solarized"
-  spec.version       = Octopress::Solarized::VERSION
-  spec.authors       = ["Brandon Mathis"]
-  spec.email         = ["brandon@imathis.com"]
-  spec.description   = %q{Ethan Schoonover's solarized theme (with tweaks) for Octopress Ink.}
-  spec.summary       = %q{Ethan Schoonover's solarized theme (with tweaks) for Octopress Ink.}
-  spec.homepage      = "https://github.com/octopress/solarized"
+  spec.name          = "octopress-spacegray"
+  spec.version       = Octopress::Spacegray::VERSION
+  spec.authors       = [""]
+  spec.email         = [""]
+  spec.description   = %q{}
+  spec.summary       = %q{}
+  spec.homepage      = "https://github.com/octopress/spacegray"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").grep(/^(bin\/|lib\/|assets\/|changelog|readme|license)/i)

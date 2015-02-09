@@ -3,23 +3,29 @@ require "autoprefixer-rails"
 
 desc "Generate CSS build"
 
+palettes = ['ocean', 'eighties']
+shades = ['light', 'dark']
+
 task :build_css, :style do |t, args|
   style = args.style || 'compressed'
-  add_sass
-  compile 'build/solarized-light.scss', style
-  compile 'build/solarized-dark.scss', style
+  palettes.each do |palette|
+    shades.each do |shade|
+      add_sass(palette, shade)
+      compile "build/spacegray-#{palette}-#{shade}.scss", style
+    end
+  end
   remove_sass
 end
 
-def add_sass
+def add_sass(palette, shade)
   path = "assets/stylesheets/"
-  sass  = "$solarized: dark;"
-  sass += File.open("#{path}index.scss").read
-    .sub(/\$solarized.+$/,'')
-    .gsub(/@import\s+('|")/, '@import \1../' + path)
+  sass = File.open("#{path}index.scss").read
+  sass = sass.sub(/(palette:\s+)({{.*}})/, '\1'+palette)
+  sass = sass.gsub(/(shade:\s+)({{.*}})/, '\1'+shade)
+  sass = sass.sub(/@import\s+('|")(.*)'/, '@import \1' + palette + "\'")
+  sass = sass.gsub(/@import\s+('|")/, '@import \1../' + path)
 
-  File.open('build/solarized-dark.scss', 'w') { |f| f.write sass }
-  File.open('build/solarized-light.scss', 'w') { |f| f.write sass.sub(/dark/,'light') }
+  File.open("build/spacegray-#{palette}-#{shade}.scss", 'w') { |f| f.write sass }
 end
 
 def remove_sass
@@ -27,7 +33,7 @@ def remove_sass
 end
 
 
-def compile(file, style='default')
+def compile(file, style)
   css = file.sub(/scss/,'css')
   system "sass --style #{style} --no-cache #{file} #{css}"
   prefix_css(css)

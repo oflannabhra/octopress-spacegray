@@ -1,5 +1,6 @@
-$solarized: {{ plugins.octopress-solarized.style }};
+$palette: {{ plugins.octopress-spacegray.palette }};
+$shade:   {{ plugins.octopress-spacegray.shade}};
 
-@import 'solarized';
+@import 'ocean';
 @import 'code-mixins';
 @import 'code-highlight';
