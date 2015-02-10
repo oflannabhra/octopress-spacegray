@@ -1,6 +1,5 @@
-$palette: {{ plugins.octopress-spacegray.palette }};
-$shade:   {{ plugins.octopress-spacegray.shade}};
+$shade: {{ plugins.octopress-spacegray.shade}};
 
-@import 'ocean';
+@import '{{ plugins.octopress-spacegray.palette }}';
 @import 'code-mixins';
 @import 'code-highlight';

@@ -1,0 +1,29 @@
+// from the base16 color schemes 
+// https://github.com/chriskempson/base16
+// monokai
+
+$_base00: #272822; //darkest blue
+$_base01: #383830; //dark blue
+$_base02: #49483e; //darkest gray
+$_base03: #75715e; //dark gray
+$_base04: #a59f85; //medium gray
+$_base05: #f8f8f2; //medium light gray
+$_base06: #f5f4f1; //light gray
+$_base07: #f9f8f5; //lightest gray
+
+$_base08: #f92672; //red
+$_base09: #fd971f; //orange
+$_base0A: #f4bf75; //yellow
+$_base0B: #a6e22e; //green
+$_base0C: #a1efe4; //cyan
+$_base0D: #66d9ef; //blue
+$_base0E: #ae81ff; //violet
+$_base0F: #cc6633; //magenta
+
+$pre-marker:              rgba(#00baff, .5) !default;
+$pre-marker-border:       rgba($pre-marker, .13) !default;
+$pre-marker-border-left:  $pre-marker;
+
+$code-bg:                 rgba(#fff, .3); // slate gray (spacegray)
+$code-bg-light: #dfe1e8;
+$code-border:             rgba(#000, .1);

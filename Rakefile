@@ -3,7 +3,7 @@ require "autoprefixer-rails"
 
 desc "Generate CSS build"
 
-palettes = ['ocean', 'eighties']
+palettes = ['ocean', 'eighties', 'monokai']
 shades = ['light', 'dark']
 
 task :build_css, :style do |t, args|
@@ -20,9 +20,8 @@ end
 def add_sass(palette, shade)
   path = "assets/stylesheets/"
   sass = File.open("#{path}index.scss").read
-  sass = sass.sub(/(palette:\s+)({{.*}})/, '\1'+palette)
   sass = sass.gsub(/(shade:\s+)({{.*}})/, '\1'+shade)
-  sass = sass.sub(/@import\s+('|")(.*)'/, '@import \1' + palette + "\'")
+  sass = sass.sub(/(@import\s+')({{.*}})/, '\1' + palette)
   sass = sass.gsub(/@import\s+('|")/, '@import \1../' + path)
 
   File.open("build/spacegray-#{palette}-#{shade}.scss", 'w') { |f| f.write sass }
