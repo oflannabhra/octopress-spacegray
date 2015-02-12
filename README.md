@@ -1,6 +1,6 @@
 # Octopress Spacegray
 
-This Octopress plugin lets you style your code blocks using any of the [base16]() palettes. It draws heavily from Brandon Mathis' [`octopress/solarized` gem](), as well as the [Spacegray]() SublimeText Plugin.
+This Octopress plugin lets you style your code blocks using any of the [base16](https://github.com/chriskempson/base16) palettes. It draws heavily from Brandon Mathis' [`octopress/solarized` gem](https://github.com/octopress/solarized), as well as the [Spacegray](https://github.com/kkga/spacegray) SublimeText Plugin.
 
 ## Installation
 
