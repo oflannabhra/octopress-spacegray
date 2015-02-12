@@ -1,12 +1,12 @@
-# Octopress Solarized
+# Octopress Spacegray
 
-Style your code blocks using Ethan Schoonover's solarized theme (with tweaks) on Jekyll and Octopress sites.
+This Octopress plugin lets you style your code blocks using any of the [base16]() palettes. It draws heavily from Brandon Mathis' [`octopress/solarized` gem](), as well as the [Spacegray]() SublimeText Plugin.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'octopress-solarized'
+    gem 'octopress-spacegray'
 
 And then execute:
 
@@ -14,21 +14,30 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install octopress-solarized
+    $ gem install octopress-spacegray
 
 Next add it to your gems list in Jekyll's `_config.yml`
 
     gems:
-      - octopress-solarized
+      - octopress-spacegray
 
 If you're using a standard Jekyll theme add `{% css_asset_tag %}` to your site layout.
 
 If you're using an Octopress Ink Theme, stylesheets should be automatically added when you generate your site.
 
-## Contributing
+## Configuration
 
-1. Fork it ( https://github.com/octopress/solarized/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+To configure, add
+
+```yaml
+palette: <palette-name>
+shade: <light/dark>
+```
+to your `config.yml
+
+Currently available palettes:
+* ocean
+* monokai
+* eighties
+
+Shade is either `light` or `dark`
